@@ -1,4 +1,4 @@
-FROM maven:3.9.9 AS builder
+FROM maven:3.9.9-amazoncorretto-25 AS builder
 
 WORKDIR /build
 COPY . .

@@ -104,7 +104,7 @@ cleanup schedules, notifications, and privacy controls.
 
 ## Technologies
 
-- **Java 21**
+- **Java 25**
 - **Spring Boot 3.5.x** (Spring Web/MVC, Actuator)
 - **Spring Security** (app/admin/password flows, CSRF cookie)
 - **Spring Data JPA** + Hibernate ORM 6.6 (community dialects)
@@ -162,7 +162,7 @@ services:
 
 Prerequisites:
 
-- Java 21+
+- Java 25+
 - Maven
 - SQLite
 

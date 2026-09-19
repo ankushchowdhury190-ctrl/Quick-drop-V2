@@ -4,7 +4,7 @@ WORKDIR /build
 COPY . .
 RUN mvn clean package
 
-FROM amazoncorretto:21.0.6-alpine AS corretto-jdk
+FROM amazoncorretto:25-alpine AS corretto-jdk
 
 RUN apk add --no-cache binutils
 RUN $JAVA_HOME/bin/jlink \

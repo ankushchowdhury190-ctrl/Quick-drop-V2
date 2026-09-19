@@ -100,7 +100,7 @@ docker compose down
 
 Prereqs:
 
-- Java 21
+- Java 25
 - Maven (or use the included wrapper: `./mvnw`)
 
 Build + run:
@@ -118,7 +118,7 @@ Or run via Spring Boot:
 
 First run will create required local directories (including `./db`) and use SQLite at `db/quickdrop.db`.
 
-IDE run: run the Spring Boot main class (`QuickdropApplication`) with Java 21.
+IDE run: run the Spring Boot main class (`QuickdropApplication`) with Java 25.
 
 First-run / admin access: QuickDrop enforces admin-password setup flow. If no admin password exists yet, admin routes are gated until `/admin/setup` is completed. After starting the app:
 

@@ -1,0 +1,17 @@
+FROM maven:3.9.9-amazoncorretto-25 AS builder
+
+WORKDIR /build
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM amazoncorretto:25-alpine
+
+WORKDIR /app
+
+COPY --from=builder /build/target/quickdrop.jar /app/quickdrop.jar
+
+ENV PORT=80
+
+EXPOSE 80
+
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=$PORT -jar /app/quickdrop.jar"]
